@@ -104,7 +104,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </ul>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="#" id="toactive" class="nav-link" onmouseleave="mouseleft()" onmouseover="mouseover()" >
               <i class="nav-icon fas fa-user"></i>
               <p>
                 Profile
@@ -233,6 +233,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- ./wrapper -->
 
 <!-- REQUIRED SCRIPTS -->
+<script>
+
+function mouseover() {
+   var element = document.getElementById("toactive");
+   element.classList.add("active");
+}
+
+function mouseleft() {
+   var element = document.getElementById("toactive");
+   element.classList.remove("active");
+}
+
+
+</script>
 
 <script src="/js/app.js"></script>
 </body>

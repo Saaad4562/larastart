@@ -71,7 +71,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="#" id="dash" class="nav-link" onmouseleave="mouseleft(this)" onmouseover="mouseover(this)">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -81,7 +81,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </li>
 
                <li class="nav-item has-treeview">
-            <a href="#" class="nav-link active">
+            <a href="#" id="manage" class="nav-link " onmouseleave="mouseleft(this)" onmouseover="mouseover(this)">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Management
@@ -104,7 +104,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </ul>
           </li>
           <li class="nav-item">
-            <a href="#" id="toactive" class="nav-link" onmouseleave="mouseleft()" onmouseover="mouseover()" >
+            <a href="#" id="toactive" class="nav-link" onmouseleave="mouseleft(this)" onmouseover="mouseover(this)" >
               <i class="nav-icon fas fa-user"></i>
               <p>
                 Profile
@@ -113,8 +113,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-sign-out-alt"></i>
+            <a href="#" id="logout" class="nav-link" onmouseleave="mouseleft(this)" onmouseover="mouseover(this)">
+              <i  class="nav-icon fas fa-sign-out-alt"></i>
               <p>
                 Logout
                 <span class="right badge badge-danger">New</span>
@@ -235,13 +235,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- REQUIRED SCRIPTS -->
 <script>
 
-function mouseover() {
-   var element = document.getElementById("toactive");
+function mouseover(x) {
+  var ele = x.id;
+   var element = document.getElementById(ele);
    element.classList.add("active");
 }
 
-function mouseleft() {
-   var element = document.getElementById("toactive");
+function mouseleft(x) {
+  var ele = x.id;
+   var element = document.getElementById(ele);
    element.classList.remove("active");
 }
 
